@@ -4,32 +4,8 @@
 #include <vector>
 #include <algorithm>
 #include "matrix.h"
+#include "cycle.h"
 
-class Path {
-public:
-    int row, column;
-    Path(int r, int c) : row(r), column(c) {}
-    bool operator<(const Path& p) const {
-        if (row > p.row)
-            return false;
-        return true;
-    }
-    ~Path() {}
-};
-
-class A{
-private :
-    class node {
-        int num;
-        node *pre, *next;
-    };
-public:
-    node *nodelist;
-    vector<Path> PathGroup;
-
-    bool AddPath(int, int);
-    bool RemovePath(int, int);
-};
 class TSP {
 public:
     // constructor
